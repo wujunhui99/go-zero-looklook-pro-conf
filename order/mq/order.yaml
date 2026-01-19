@@ -21,7 +21,7 @@ Log:
   Level: error
 
 Redis:
-  Host: 192.168.1.181:63799
+  Host: srv-data:63799
   Type: node
   Pass: G62m50oigInC30sf
 
@@ -29,7 +29,7 @@ Redis:
 PaymentUpdateStatusConf:
   Name: PaymentUpdateStatus
   Brokers:
-    - 192.168.1.181:9092
+    - srv-data:9092
   Group: payment-update-paystatus-group
   Topic: payment-update-paystatus-topic
   Offset: first

@@ -12,7 +12,7 @@ Prometheus:
 #链路追踪
 Telemetry:
   Name: usercenter-rpc
-  Endpoint: http://192.168.1.181:14268/api/traces
+  Endpoint: http://srv-data:14268/api/traces
   Sampler: 1.0
   Batcher: jaeger
 
@@ -21,13 +21,13 @@ Log:
   Level: error
 
 Redis:
-  Host: 192.168.1.181:36379
+  Host: srv-data:36379
   Type: node
   Pass: G62m50oigInC30sf
 DB:
-  DataSource: root:PXDN93VRKUm8TeE7@tcp(192.168.1.181:33069)/looklook_usercenter?charset=utf8mb4&parseTime=true&loc=Asia%2FShanghai
+  DataSource: root:PXDN93VRKUm8TeE7@tcp(srv-data:33069)/looklook_usercenter?charset=utf8mb4&parseTime=true&loc=Asia%2FShanghai
 Cache:
-  - Host: 192.168.1.181:36379
+  - Host: srv-data:36379
     Pass: G62m50oigInC30sf
 
 #rpc service

@@ -11,7 +11,7 @@ Prometheus:
 #链路追踪
 Telemetry:
   Name: mqueue-rpc
-  Endpoint: http://192.168.1.181:14268/api/traces
+  Endpoint: http://srv-data:14268/api/traces
   Sampler: 1.0
   Batcher: jaeger
 
@@ -20,10 +20,10 @@ Log:
   Level: error
 
 Redis:
-  Host: 192.168.1.181:36379
+  Host: srv-data:36379
   Type: node
   Pass: G62m50oigInC30sf
 
 KqServerConf:
   Brokers:
-    - 192.168.1.181:9092
+    - srv-data:9092
