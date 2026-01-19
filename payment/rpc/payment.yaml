@@ -24,6 +24,7 @@ Redis:
   Host: srv-data:36379
   Type: node
   Pass: G62m50oigInC30sf
+  Key: payment-rpc
 DB:
   DataSource: root:PXDN93VRKUm8TeE7@tcp(srv-data:33069)/looklook_payment?charset=utf8mb4&parseTime=true&loc=Asia%2FShanghai
 Cache:
