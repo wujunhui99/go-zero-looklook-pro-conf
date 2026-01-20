@@ -9,6 +9,11 @@ Prometheus:
   Port: 9091
   Path: /metrics
 
+#jwtAuth
+JwtAuth:
+  AccessSecret: ae0536f9-6450-4606-8e13-5a19ed505da0
+
+
 #链路追踪
 Telemetry:
   Name: payment-api
