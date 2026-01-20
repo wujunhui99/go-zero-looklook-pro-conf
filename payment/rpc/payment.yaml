@@ -2,7 +2,6 @@ Name: payment-rpc
 ListenOn: 0.0.0.0:1105
 Mode: dev
 
-
 #监控
 Prometheus:
   Host: 0.0.0.0
@@ -35,6 +34,7 @@ Cache:
 MqueueRpcConf:
   Target: k8s://go-zero-looklook/mqueue-rpc-svc:1106 #goctl kube 默认生成的k8s yaml的serviceName: {rpc中定义的name}-svc
 
-
-
-
+KqPaymentUpdatePayStatusConf:
+  Brokers:
+    - srv-data:9092
+  Topic: payment-update-paystatus-topic
