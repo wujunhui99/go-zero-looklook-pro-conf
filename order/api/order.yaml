@@ -27,6 +27,9 @@ OrderRpcConf:
 PaymentRpcConf:
   Target: k8s://go-zero-looklook/payment-rpc-svc:1105 #goctl kube 默认生成的k8s yaml的serviceName: {rpc中定义的name}-svc
 
+TravelRpcConf:
+  Target: k8s://go-zero-looklook/travel-rpc-svc:1103
+
 Log:
   ServiceName: order-api
   Level: error
