@@ -1,30 +1,25 @@
-Name: mqueue-rpc
-ListenOn: 0.0.0.0:1106
+Name: mqueue-scheduler
 Mode: dev
 
 #监控
 Prometheus:
   Host: 0.0.0.0
-  Port: 9091
+  Port: 4011
   Path: /metrics
 
 #链路追踪
 Telemetry:
-  Name: mqueue-rpc
-  Endpoint: http://srv-data:14268/api/traces
+  Name: order-rpc
+  Endpoint:  http://srv-data:14268/api/traces
   Sampler: 1.0
   Batcher: jaeger
 
 Log:
-  ServiceName: mqueue-rpc
+  ServiceName: mqueue-scheduler
   Level: error
 
 Redis:
   Host: srv-data:36379
   Type: node
   Pass: G62m50oigInC30sf
-  Key: mqueue-rpc
-
-KqServerConf:
-  Brokers:
-    - srv-data:9092
+  Key: mqueue-scheduler

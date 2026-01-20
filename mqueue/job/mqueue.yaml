@@ -1,0 +1,38 @@
+Name: mqueue-job
+Mode: dev
+
+#监控
+Prometheus:
+  Host: 0.0.0.0
+  Port: 4010
+  Path: /metrics
+
+#Link Tracking
+Telemetry:
+  Name: order-rpc
+  Endpoint:  http://srv-data:14268/api/traces
+  Sampler: 1.0
+  Batcher: jaeger
+
+Log:
+  ServiceName: mqueue-job
+  Level: error
+
+Redis:
+  Host: srv-data:36379
+  Type: node
+  Pass: G62m50oigInC30sf
+  Key: mqueue-job
+
+
+
+#WxMiniConf
+WxMiniConf:
+  AppId: wx2add729fadddddd
+  Secret: 20365395b3de9b2a9351ddddddd
+
+OrderRpcConf:
+  Target: k8s://go-zero-looklook/order-rpc-svc:1104 #goctl kube 默认生成的k8s yaml的serviceName: {rpc中定义的name}-svc
+
+UsercenterRpcConf:
+  Target: k8s://go-zero-looklook/usercenter-rpc-svc:1102 #goctl kube 默认生成的k8s yaml的serviceName: {rpc中定义的name}-svc
